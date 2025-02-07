@@ -36,12 +36,12 @@
 
 import { getSession } from "@auth0/nextjs-auth0/edge";
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server"; // ✅ Correct import
+import type { NextRequest } from "next/server";
 
 export async function middleware(req: NextRequest) {
   try {
-    const res = new NextResponse(); // ✅ Create a response object
-    const session = await getSession(req, res); // ✅ Pass both req and res
+    const res = new NextResponse(); 
+    const session = await getSession(req, res); 
 
     const { pathname } = req.nextUrl;
 
@@ -60,7 +60,6 @@ export async function middleware(req: NextRequest) {
   }
 }
 
-// ✅ Matcher to exclude API, static assets, and login
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico|error|login).*)"],
 };
