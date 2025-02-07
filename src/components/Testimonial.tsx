@@ -74,7 +74,7 @@ export default function Testimonial() {
               transition={{ duration: 0.5 }}
             />
             {/* Testimonial Text */}
-            <p className="text-lg font-medium">"{person.comment}"</p>
+            <p className="text-lg font-medium">{person.comment}</p>
             <span className="mt-2 text-sm font-semibold text-purple-500">
               - {person.name}
             </span>

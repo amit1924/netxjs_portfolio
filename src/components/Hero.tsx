@@ -36,7 +36,7 @@ export default function Hero() {
 
       {/* Typewriter Effect with Glow */}
       <p className="mt-4 text-xl">
-        I'm a{" "}
+        I am a{" "}
         <span className="text-red-600 font-semibold bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text text-transparent animate-glow">
           <Typewriter
             words={[
