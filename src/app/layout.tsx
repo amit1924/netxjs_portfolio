@@ -74,7 +74,7 @@
 // }
 
 
-"use client"; // ✅ Required for client components
+
 
 import { UserProvider } from "@auth0/nextjs-auth0/client"; // ✅ Correct import
 import { Geist, Geist_Mono } from "next/font/google";
