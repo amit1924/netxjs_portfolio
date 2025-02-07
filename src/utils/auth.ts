@@ -1,3 +1,5 @@
+"use server"
+
 import { getSession, withPageAuthRequired } from "@auth0/nextjs-auth0";
 import type { NextApiRequest, NextApiResponse } from "next";
 

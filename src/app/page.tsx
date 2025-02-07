@@ -1,4 +1,8 @@
-import { requireAuth } from "@/utils/auth";
+"use client"; // Must be first
+
+import { useEffect } from "react";
+import { useUser } from "@auth0/nextjs-auth0/client";
+import { useRouter } from "next/navigation"; // ✅ Import useRouter
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Testimonial from "@/components/Testimonial";
@@ -7,7 +11,24 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-export default requireAuth(function Portfolio() {
+export default function Portfolio() {
+  const { user, isLoading } = useUser();
+  const router = useRouter(); // ✅ Initialize router
+
+  useEffect(() => {
+    if (!isLoading && !user) {
+      router.push("/login"); // ✅ Redirect to login page if user is not authenticated
+    }
+  }, [user, isLoading, router]);
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Loading indicator
+  }
+
+  if (!user) {
+    return null; // ✅ Prevents "You are not authorized" from showing
+  }
+
   return (
     <div className="bg-gray-950">
       <Navbar />
@@ -19,4 +40,4 @@ export default requireAuth(function Portfolio() {
       <Footer />
     </div>
   );
-});
+}
