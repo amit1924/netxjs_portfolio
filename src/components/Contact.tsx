@@ -75,56 +75,58 @@ export default function Contact() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
       >
-        {/* Name Input */}
-        <div className="flex items-center bg-gray-800 p-3 rounded border border-gray-700 mt-4">
-          <FaUser className="text-gray-400 mr-3" />
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full bg-transparent text-white focus:outline-none"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
+{/* Name Input */}
+<div className="flex items-center bg-gray-800 p-3 rounded border border-gray-700 mt-4 transition-all duration-300 focus-within:bg-purple-700 focus-within:text-black">
+  <FaUser className="text-gray-400 mr-3" />
+  <input
+    type="text"
+    placeholder="Your Name"
+    className="w-full bg-transparent text-white focus:text-black focus:outline-none"
+    value={name}
+    onChange={(e) => setName(e.target.value)}
+    required
+  />
+</div>
 
-        {/* Phone Input */}
-        <div className="flex items-center bg-gray-800 p-3 rounded border border-gray-700 mt-4">
-          <FaPhone className="text-gray-400 mr-3" />
-          <input
-            type="tel"
-            placeholder="Your Phone Number"
-            className="w-full bg-transparent text-white focus:outline-none"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            required
-          />
-        </div>
+{/* Phone Input */}
+<div className="flex items-center bg-gray-800 p-3 rounded border border-gray-700 mt-4 transition-all duration-300 focus-within:bg-blue-700 focus-within:text-black">
+  <FaPhone className="text-gray-400 mr-3" />
+  <input
+    type="tel"
+    placeholder="Your Phone Number"
+    className="w-full bg-transparent text-white focus:text-black focus:outline-none"
+    value={phone}
+    onChange={(e) => setPhone(e.target.value)}
+    required
+  />
+</div>
 
-        {/* Email Input */}
-        <div className="flex items-center bg-gray-800 p-3 rounded border border-gray-700 mt-4">
-          <FaEnvelope className="text-gray-400 mr-3" />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full bg-transparent text-white focus:outline-none"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
+{/* Email Input */}
+<div className="flex items-center bg-gray-800 p-3 rounded border border-gray-700 mt-4 transition-all duration-300 focus-within:bg-green-700 focus-within:text-black">
+  <FaEnvelope className="text-gray-400 mr-3" />
+  <input
+    type="email"
+    placeholder="Your Email"
+    className="w-full bg-transparent text-white focus:text-black focus:outline-none"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    required
+  />
+</div>
 
-        {/* Message Input */}
-        <div className="flex items-start bg-gray-800 p-3 rounded border border-gray-700 mt-4">
-          <FaComment className="text-gray-400 mr-3 mt-1" />
-          <textarea
-            placeholder="Your Message"
-            className="w-full bg-transparent text-white focus:outline-none"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          ></textarea>
-        </div>
+{/* Message Input */}
+<div className="flex items-start bg-gray-800 p-3 rounded border border-gray-700 mt-4 transition-all duration-300 focus-within:bg-red-700 focus-within:text-black">
+  <FaComment className="text-gray-400 mr-3 mt-1" />
+  <textarea
+    placeholder="Your Message"
+    className="w-full bg-transparent text-white focus:text-black focus:outline-none"
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+    required
+  ></textarea>
+</div>
+
+
 
         {/* Submit Button */}
         <motion.button

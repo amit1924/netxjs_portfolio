@@ -11,8 +11,7 @@ export default function Hero() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null; // Prevents hydration errors in Next.js
-
+  if (!mounted) return null; 
   return (
     <section className="text-center py-20 bg-gray-950 min-h-screen flex flex-col items-center justify-center">
       {/* Animated Title with Wavy Effect */}
@@ -28,6 +27,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
+            className="text-3xl font-bold bg-gradient-to-r from-pink-800 via-orange-500 to-green-700
+               bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(255,165,0,0.8)]"
           >
             {letter}
           </motion.span>

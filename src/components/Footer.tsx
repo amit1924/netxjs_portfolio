@@ -5,7 +5,7 @@ import { Facebook, Github, Mail, Phone, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-10">
+    <footer className="bg-gray-800 text-purple-350 py-10">
       <motion.div 
         className="text-center"
         initial={{ opacity: 0, y: 30 }}
@@ -26,7 +26,7 @@ export default function Footer() {
           </motion.a>
 
           <motion.a 
-            href="https://github.com/yourprofile" 
+            href="https://github.com/amit1924" 
             target="_blank" 
             rel="noopener noreferrer"
             whileHover={{ scale: 1.2 }}
@@ -35,14 +35,14 @@ export default function Footer() {
           </motion.a>
 
           <motion.a 
-            href="mailto:your-email@example.com"
+            href="mailto:amit192400@gmail.com"
             whileHover={{ scale: 1.2 }}
           >
             <Mail className="w-8 h-8 text-red-400 hover:text-red-300 transition" />
           </motion.a>
 
           <motion.a 
-            href="tel:+1234567890"
+            href="tel:+918340616588"
             whileHover={{ scale: 1.2 }}
           >
             <Phone className="w-8 h-8 text-green-500 hover:text-green-400 transition" />

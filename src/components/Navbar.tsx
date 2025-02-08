@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 // import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../public/portlogo.webp"; // Correct import
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +25,7 @@ const Navbar = () => {
 
   return (
     <motion.header 
-      className="fixed top-0 left-0 w-full bg-gray-950 text-white shadow-md z-50"
+      className="fixed top-0 left-0 w-full bg-gray-950 text-gradient-to-r from-yellow-800 via-orange-500 to-green-700 shadow-md z-50"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -43,13 +42,14 @@ const Navbar = () => {
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.5 }}
 >
-  <Image 
-    src={Logo} 
-    alt="Logo" 
-    width={40} 
-    height={50} 
-    className="rounded-3xl drop-shadow-[0_0_20px_rgba(255,105,180,0.8)]"
-  />
+<Image 
+  src="https://i.giphy.com/media/l3vR16pONsV8cKkWk/giphy.gif" 
+  alt="Funny GIF" 
+  width={40} 
+  height={50} 
+  unoptimized 
+  className="rounded-3xl drop-shadow-[0_0_20px_rgba(255,105,180,0.8)]"
+/>
 </motion.div>
 
 
@@ -115,7 +115,7 @@ const Navbar = () => {
                   <motion.a
                     key={link.name}
                     href={link.href}
-                    className="text-lg text-white hover:text-blue-400 transition-colors"
+                    className="text-lg text-gradient-to-r from-yellow-800 via-orange-500 to-green-700 hover:text-blue-400 transition-colors"
                     onClick={toggleMenu}
                     whileHover={{ scale: 1.1 }}
                   >
