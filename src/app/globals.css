@@ -2,114 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@400;600;700&display=swap');
+
 :root {
   --background: #0a0a0a; /* Dark background */
   --foreground: #d1b3ff; /* Deep purple text */
+
+  /* Custom Font Variables */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+  --font-tertiary: 'Raleway', sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  text-shadow: var(--text-shadow-strong);
 }
 
-@keyframes slideIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.8s ease-out;
-}
-
-.animate-slideIn {
-  animation: slideIn 0.8s ease-out forwards;
-}
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes zoomRotate {
-  0% {
-    transform: scale(0.5) rotate(-10deg);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-.animate-bounceIn {
-  animation: bounceIn 0.8s ease-out;
-}
-
-.animate-zoomRotate {
-  animation: zoomRotate 1s ease-out;
-}
-@keyframes slideInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes cardEntry {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.animate-slideInUp {
-  animation: slideInUp 0.8s ease-in-out;
-}
-
-.animate-cardEntry {
-  animation: cardEntry 0.6s ease-out forwards;
-}
-
-.animate-cardEntry:hover {
-  transform: scale(1.05) rotate(2deg);
-  box-shadow: 0px 0px 15px rgba(128, 0, 128, 0.7);
-  transition: all 0.3s ease-in-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.8s ease-out;
+p {
+  font-weight: 500;
+  text-shadow: var(--text-shadow-default);
 }
